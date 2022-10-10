@@ -23,3 +23,8 @@ def rotate_half(x):
 
 def apply_rotary_pos_emb(pos, t):
     return (t * pos.cos()) + (rotate_half(t) * pos.sin())
+
+# an example
+# rotary_emb = RotaryEmbeddding(dim)
+# pos_emb = rotary_emb(n, device=device)
+# q, k = map(lambda: t: apply_rotary_pos_emb(pos_emb, t), (q, k))
